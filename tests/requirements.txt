@@ -1,0 +1,7 @@
+pytest
+grpcio
+grpcio-tools
+httpx
+pytest-asyncio
+pytest-mock
+clickhouse-driver
