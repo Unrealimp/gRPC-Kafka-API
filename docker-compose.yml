@@ -21,12 +21,14 @@ services:
     image: clickhouse/clickhouse-server:latest
     ports:
       - "8123:8123"
+      - "9000:9000"
     volumes:
       - ./init.sql:/docker-entrypoint-initdb.d/init.sql
     environment:
       CLICKHOUSE_DB: default
       CLICKHOUSE_USER: default
       CLICKHOUSE_PASSWORD: ""
+      CLICKHOUSE_DEFAULT_ACCESS_MANAGEMENT: 1
 
 
   zookeeper:

@@ -9,3 +9,10 @@ curl "http://localhost:8000/top/posts?metric=likes"
 
 # Топ пользователей по комментариям
 curl "http://localhost:8000/top/users?metric=comments"
+
+
+
+#Запуск тестов 
+cd ./python/
+source venv/bin/activate  # если ещё не активировано
+PYTHONPATH=. pytest tests/ -v
